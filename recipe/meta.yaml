@@ -1,5 +1,5 @@
 {% set name = "itksn" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a4c611aa4feae0ad8b92298873c3864034d8ea338597a69443183688b28e8170
+  sha256: d96533de12049076e31b949967b447d4be7fedb4c9da45c6b701ab30de60d982
 
 build:
   noarch: python
