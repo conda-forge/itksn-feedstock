@@ -11,24 +11,26 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - itksn = itksn.cli:app
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - hatchling >=0.7
     - hatch-vcs
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - typing_extensions >=3.7   # python < 3.8
     - typer
     - construct >=2.10
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - itksn
   commands:
